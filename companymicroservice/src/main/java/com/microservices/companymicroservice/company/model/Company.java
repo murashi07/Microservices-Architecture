@@ -1,6 +1,6 @@
 package com.microservices.companymicroservice.company.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+
 
 import jakarta.persistence.*;
 import lombok.Data;

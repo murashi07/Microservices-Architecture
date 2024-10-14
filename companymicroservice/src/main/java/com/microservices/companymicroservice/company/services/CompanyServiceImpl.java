@@ -1,5 +1,6 @@
 package com.microservices.companymicroservice.company.services;
 
+
 import com.microservices.companymicroservice.company.model.Company;
 import com.microservices.companymicroservice.company.repository.CompanyRepository;
 import org.springframework.stereotype.Service;
@@ -7,9 +8,11 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+
 @Service
 public class CompanyServiceImpl implements CompanyService{
-    private CompanyRepository companyRepository;
+
+    private final CompanyRepository companyRepository;
 
     public CompanyServiceImpl(CompanyRepository companyRepository) {
         this.companyRepository = companyRepository;
@@ -17,6 +20,7 @@ public class CompanyServiceImpl implements CompanyService{
 
     @Override
     public List<Company> getAllCompanies() {
+
         return companyRepository.findAll();
     }
 
